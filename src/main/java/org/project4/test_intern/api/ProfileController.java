@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
+
 import java.time.Instant;
 import java.util.HashMap;
 import java.util.Map;
@@ -48,17 +49,17 @@ public class ProfileController {
 
             UserDTO userDTO = userService.info(username);
             userDTO.setPassWord(null);
+
             // Cập nhật RequestContext với thông tin
             RequestContext context = RequestContext.get();
-            context.setUserId(userDTO.getId()); // Giả sử userDTO có phương thức getId()
-            context.setTimestamp(Instant.now());
-
             // Chuẩn bị phản hồi
             Map<String, Object> response = new HashMap<>();
             response.put("userDTO", userDTO);
-            response.put("requestId", context.getRequestId());
-            response.put("userId", context.getUserId());
-            response.put("timestamp", context.getTimestamp());
+            if (context != null) {
+                response.put("requestId", context.getRequestId());
+                response.put("userId", context.getUserId());
+                response.put("timestamp", context.getTimestamp());
+            }
 
             return ResponseEntity.ok(response);
 

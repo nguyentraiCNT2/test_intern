@@ -1,4 +1,3 @@
-// JwtRequestFilter.java
 package org.project4.test_intern.securityConfig;
 
 import io.jsonwebtoken.ExpiredJwtException;
@@ -6,6 +5,7 @@ import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.project4.test_intern.context.RequestContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -16,6 +16,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
+import java.time.Instant;
 
 @Component
 public class JwtRequestFilter extends OncePerRequestFilter {
@@ -36,7 +37,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
         String username = null;
         String jwtToken = null;
 
-        if (requestTokenHeader != null && requestTokenHeader.startsWith("Bearer")) {
+        if (requestTokenHeader != null && requestTokenHeader.startsWith("Bearer ")) {
             jwtToken = requestTokenHeader.substring(7);
             try {
                 username = jwtTokenUtil.getUsernameFromToken(jwtToken);
@@ -48,7 +49,6 @@ public class JwtRequestFilter extends OncePerRequestFilter {
         }
 
         if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
-
             UserDetails userDetails = this.jwtUserDetailsService.loadUserByUsername(username);
 
             if (jwtTokenUtil.validateToken(jwtToken, userDetails)) {
@@ -57,8 +57,21 @@ public class JwtRequestFilter extends OncePerRequestFilter {
                 usernamePasswordAuthenticationToken
                         .setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
                 SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
+
+                // Cập nhật RequestContext với userId kiểu Long
+                RequestContext context = RequestContext.get();
+                if (context != null) {
+                    try {
+                        Long userId = Long.parseLong(userDetails.getUsername()); // Giả sử username là ID người dùng dưới dạng String
+                        context.setUserId(userId);
+                    } catch (NumberFormatException e) {
+                        System.err.println("Failed to parse user ID: " + userDetails.getUsername());
+                    }
+                    context.setTimestamp(Instant.now());
+                }
             }
         }
+
         chain.doFilter(request, response);
     }
 }

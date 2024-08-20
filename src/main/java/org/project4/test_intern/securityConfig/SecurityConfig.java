@@ -1,6 +1,7 @@
 // SecurityConfig.java
 package org.project4.test_intern.securityConfig;
 
+import org.project4.test_intern.config.RequestContextFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -31,7 +32,8 @@ public class SecurityConfig {
     @Autowired
     @Lazy
     private CustomUserDetailsService userDetailsService;
-
+    @Autowired
+    private RequestContextFilter requestContextFilter;
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
@@ -51,8 +53,8 @@ public class SecurityConfig {
                 )
                 .csrf(csrf -> csrf.disable());
 
+        http.addFilterBefore(requestContextFilter, UsernamePasswordAuthenticationFilter.class);
         http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
-
         return http.build();
     }
 

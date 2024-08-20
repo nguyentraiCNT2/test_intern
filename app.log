@@ -8921,3 +8921,935 @@ Consider defining a bean of type 'org.project4.test_intern.securityConfig.JwtReq
 2024-08-20T18:57:12.973+07:00  INFO 18820 --- [test_intern] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2024-08-20T18:57:12.973+07:00  INFO 18820 --- [test_intern] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2024-08-20T18:57:12.975+07:00  INFO 18820 --- [test_intern] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-20T19:17:59.454+07:00  INFO 18820 --- [test_intern] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T19:17:59.460+07:00  INFO 18820 --- [test_intern] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-20T19:17:59.463+07:00  INFO 18820 --- [test_intern] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-20T22:37:26.237+07:00  INFO 10260 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Starting TestInternApplication using Java 21.0.2 with PID 10260 (D:\test\test_intern\target\classes started by ninhn in D:\test\test_intern)
+2024-08-20T22:37:26.240+07:00  INFO 10260 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-08-20T22:37:26.438+07:00  INFO 10260 --- [test_intern] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-20T22:37:26.438+07:00  INFO 10260 --- [test_intern] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-20T22:37:27.560+07:00  WARN 10260 --- [test_intern] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'requestContextFilter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]: Cannot register bean definition [Root bean: class [org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=requestContextFilter; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]] for bean 'requestContextFilter' since there is already [Generic bean: class [org.project4.test_intern.config.RequestContextFilter]; scope=singleton; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in file [D:\test\test_intern\target\classes\org\project4\test_intern\config\RequestContextFilter.class]] bound.
+2024-08-20T22:37:27.568+07:00  INFO 10260 --- [test_intern] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-20T22:37:27.648+07:00 ERROR 10260 --- [test_intern] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'requestContextFilter', defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class], could not be registered. A bean with that name has already been defined in file [D:\test\test_intern\target\classes\org\project4\test_intern\config\RequestContextFilter.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2024-08-20T22:40:19.173+07:00  INFO 8432 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Starting TestInternApplication using Java 21.0.2 with PID 8432 (D:\test\test_intern\target\classes started by ninhn in D:\test\test_intern)
+2024-08-20T22:40:19.175+07:00  INFO 8432 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-08-20T22:40:19.229+07:00  INFO 8432 --- [test_intern] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-20T22:40:19.229+07:00  INFO 8432 --- [test_intern] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-20T22:40:19.902+07:00  WARN 8432 --- [test_intern] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'requestContextFilter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]: Cannot register bean definition [Root bean: class [org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=requestContextFilter; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]] for bean 'requestContextFilter' since there is already [Generic bean: class [org.project4.test_intern.config.RequestContextFilter]; scope=singleton; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in file [D:\test\test_intern\target\classes\org\project4\test_intern\config\RequestContextFilter.class]] bound.
+2024-08-20T22:40:19.908+07:00  INFO 8432 --- [test_intern] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-20T22:40:19.931+07:00 ERROR 8432 --- [test_intern] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'requestContextFilter', defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class], could not be registered. A bean with that name has already been defined in file [D:\test\test_intern\target\classes\org\project4\test_intern\config\RequestContextFilter.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2024-08-20T22:42:13.777+07:00  INFO 18184 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Starting TestInternApplication using Java 21.0.2 with PID 18184 (D:\test\test_intern\target\classes started by ninhn in D:\test\test_intern)
+2024-08-20T22:42:13.779+07:00  INFO 18184 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-08-20T22:42:13.832+07:00  INFO 18184 --- [test_intern] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-20T22:42:13.833+07:00  INFO 18184 --- [test_intern] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-20T22:42:14.662+07:00  INFO 18184 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-20T22:42:14.756+07:00  INFO 18184 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 3 JPA repository interfaces.
+2024-08-20T22:42:15.207+07:00  WARN 18184 --- [test_intern] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-20T22:42:15.321+07:00  INFO 18184 --- [test_intern] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-08-20T22:42:15.714+07:00  INFO 18184 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-20T22:42:15.729+07:00  INFO 18184 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-20T22:42:15.729+07:00  INFO 18184 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-20T22:42:15.789+07:00  INFO 18184 --- [test_intern] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-20T22:42:15.789+07:00  INFO 18184 --- [test_intern] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1955 ms
+2024-08-20T22:42:16.100+07:00  INFO 18184 --- [test_intern] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-20T22:42:16.191+07:00  INFO 18184 --- [test_intern] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-20T22:42:16.235+07:00  INFO 18184 --- [test_intern] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-20T22:42:16.635+07:00  INFO 18184 --- [test_intern] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-20T22:42:16.670+07:00  INFO 18184 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-20T22:42:17.101+07:00  INFO 18184 --- [test_intern] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 846f3c3f-fb76-4242-ad58-b265c07e32b0
+2024-08-20T22:42:17.104+07:00  INFO 18184 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-20T22:42:17.156+07:00  WARN 18184 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: SQLServer2012Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-20T22:42:17.158+07:00  WARN 18184 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: SQLServer2012Dialect has been deprecated; use org.hibernate.dialect.SQLServerDialect instead
+2024-08-20T22:42:18.239+07:00  INFO 18184 --- [test_intern] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-20T22:42:19.339+07:00  INFO 18184 --- [test_intern] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T22:42:20.131+07:00  INFO 18184 --- [test_intern] [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static final long org.project4.test_intern.securityConfig.JwtAuthenticationEntryPoint.serialVersionUID
+2024-08-20T22:42:20.206+07:00  WARN 18184 --- [test_intern] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-20T22:42:20.222+07:00  WARN 18184 --- [test_intern] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-08-20T22:42:20.790+07:00  INFO 18184 --- [test_intern] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-20T22:42:20.826+07:00  INFO 18184 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-20T22:42:20.834+07:00  INFO 18184 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Started TestInternApplication in 7.567 seconds (process running for 8.432)
+2024-08-20T22:42:31.224+07:00  INFO 18184 --- [test_intern] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-20T22:42:31.225+07:00  INFO 18184 --- [test_intern] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-20T22:42:31.226+07:00  INFO 18184 --- [test_intern] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-20T22:45:17.808+07:00  INFO 18184 --- [test_intern] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-08-20T22:45:17.836+07:00  INFO 18184 --- [test_intern] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T22:45:17.840+07:00  INFO 18184 --- [test_intern] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-20T22:45:17.844+07:00  INFO 18184 --- [test_intern] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-20T22:45:18.035+07:00  INFO 18184 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Starting TestInternApplication using Java 21.0.2 with PID 18184 (D:\test\test_intern\target\classes started by ninhn in D:\test\test_intern)
+2024-08-20T22:45:18.035+07:00  INFO 18184 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-08-20T22:45:18.416+07:00  INFO 18184 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-20T22:45:18.442+07:00  INFO 18184 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 3 JPA repository interfaces.
+2024-08-20T22:45:18.557+07:00  WARN 18184 --- [test_intern] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-20T22:45:18.559+07:00  INFO 18184 --- [test_intern] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-08-20T22:45:18.621+07:00  INFO 18184 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-20T22:45:18.623+07:00  INFO 18184 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-20T22:45:18.624+07:00  INFO 18184 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-20T22:45:18.658+07:00  INFO 18184 --- [test_intern] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-20T22:45:18.659+07:00  INFO 18184 --- [test_intern] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 620 ms
+2024-08-20T22:45:18.717+07:00  INFO 18184 --- [test_intern] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-20T22:45:18.721+07:00  INFO 18184 --- [test_intern] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-20T22:45:18.732+07:00  INFO 18184 --- [test_intern] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-20T22:45:18.734+07:00  INFO 18184 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-08-20T22:45:18.759+07:00  INFO 18184 --- [test_intern] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection ConnectionID:11 ClientConnectionId: ded8c808-ab71-4091-90f3-918ef211b25a
+2024-08-20T22:45:18.760+07:00  INFO 18184 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-08-20T22:45:18.761+07:00  WARN 18184 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: SQLServer2012Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-20T22:45:18.761+07:00  WARN 18184 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: SQLServer2012Dialect has been deprecated; use org.hibernate.dialect.SQLServerDialect instead
+2024-08-20T22:45:18.845+07:00  INFO 18184 --- [test_intern] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-20T22:45:19.604+07:00  INFO 18184 --- [test_intern] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T22:45:19.721+07:00  INFO 18184 --- [test_intern] [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static final long org.project4.test_intern.securityConfig.JwtAuthenticationEntryPoint.serialVersionUID
+2024-08-20T22:45:19.726+07:00  WARN 18184 --- [test_intern] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig': Unsatisfied dependency expressed through field 'jwtRequestFilter': No qualifying bean of type 'org.project4.test_intern.securityConfig.JwtRequestFilter' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-08-20T22:45:19.727+07:00  INFO 18184 --- [test_intern] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T22:45:19.727+07:00  INFO 18184 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-08-20T22:45:19.729+07:00  INFO 18184 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-08-20T22:45:19.730+07:00  INFO 18184 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-08-20T22:45:19.738+07:00  INFO 18184 --- [test_intern] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-20T22:45:19.768+07:00 ERROR 18184 --- [test_intern] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field jwtRequestFilter in org.project4.test_intern.securityConfig.SecurityConfig required a bean of type 'org.project4.test_intern.securityConfig.JwtRequestFilter' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.project4.test_intern.securityConfig.JwtRequestFilter' in your configuration.
+
+2024-08-20T22:45:21.240+07:00  INFO 18184 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Starting TestInternApplication using Java 21.0.2 with PID 18184 (D:\test\test_intern\target\classes started by ninhn in D:\test\test_intern)
+2024-08-20T22:45:21.241+07:00  INFO 18184 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-08-20T22:45:21.473+07:00  INFO 18184 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-20T22:45:21.491+07:00  INFO 18184 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 3 JPA repository interfaces.
+2024-08-20T22:45:21.552+07:00  WARN 18184 --- [test_intern] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-20T22:45:21.553+07:00  INFO 18184 --- [test_intern] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-08-20T22:45:21.589+07:00  INFO 18184 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-20T22:45:21.591+07:00  INFO 18184 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-20T22:45:21.591+07:00  INFO 18184 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-20T22:45:21.613+07:00  INFO 18184 --- [test_intern] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-08-20T22:45:21.613+07:00  INFO 18184 --- [test_intern] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 370 ms
+2024-08-20T22:45:21.659+07:00  INFO 18184 --- [test_intern] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-20T22:45:21.662+07:00  INFO 18184 --- [test_intern] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-20T22:45:21.669+07:00  INFO 18184 --- [test_intern] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-20T22:45:21.670+07:00  INFO 18184 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-08-20T22:45:21.684+07:00  INFO 18184 --- [test_intern] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection ConnectionID:21 ClientConnectionId: 86683251-e65c-46c3-8c04-6e7a415bc07d
+2024-08-20T22:45:21.685+07:00  INFO 18184 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-08-20T22:45:21.685+07:00  WARN 18184 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: SQLServer2012Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-20T22:45:21.685+07:00  WARN 18184 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: SQLServer2012Dialect has been deprecated; use org.hibernate.dialect.SQLServerDialect instead
+2024-08-20T22:45:21.734+07:00  INFO 18184 --- [test_intern] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-20T22:45:21.778+07:00  INFO 18184 --- [test_intern] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T22:45:21.849+07:00  INFO 18184 --- [test_intern] [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static final long org.project4.test_intern.securityConfig.JwtAuthenticationEntryPoint.serialVersionUID
+2024-08-20T22:45:21.869+07:00  WARN 18184 --- [test_intern] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-20T22:45:21.875+07:00  WARN 18184 --- [test_intern] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-08-20T22:45:22.018+07:00  INFO 18184 --- [test_intern] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-20T22:45:22.030+07:00  INFO 18184 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-20T22:45:22.033+07:00  INFO 18184 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Started TestInternApplication in 0.827 seconds (process running for 189.631)
+2024-08-20T22:45:22.034+07:00  INFO 18184 --- [test_intern] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-20T22:47:34.911+07:00  INFO 18184 --- [test_intern] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-08-20T22:47:34.931+07:00  INFO 18184 --- [test_intern] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T22:47:34.932+07:00  INFO 18184 --- [test_intern] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-08-20T22:47:34.934+07:00  INFO 18184 --- [test_intern] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2024-08-20T22:47:35.055+07:00  INFO 18184 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Starting TestInternApplication using Java 21.0.2 with PID 18184 (D:\test\test_intern\target\classes started by ninhn in D:\test\test_intern)
+2024-08-20T22:47:35.055+07:00  INFO 18184 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-08-20T22:47:35.404+07:00  INFO 18184 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-20T22:47:35.425+07:00  INFO 18184 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 3 JPA repository interfaces.
+2024-08-20T22:47:35.508+07:00  WARN 18184 --- [test_intern] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-20T22:47:35.509+07:00  INFO 18184 --- [test_intern] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-08-20T22:47:35.563+07:00  INFO 18184 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-20T22:47:35.564+07:00  INFO 18184 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-20T22:47:35.564+07:00  INFO 18184 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-20T22:47:35.594+07:00  INFO 18184 --- [test_intern] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-08-20T22:47:35.595+07:00  INFO 18184 --- [test_intern] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 535 ms
+2024-08-20T22:47:35.661+07:00  INFO 18184 --- [test_intern] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-20T22:47:35.664+07:00  INFO 18184 --- [test_intern] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-20T22:47:35.675+07:00  INFO 18184 --- [test_intern] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-20T22:47:35.676+07:00  INFO 18184 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2024-08-20T22:47:35.698+07:00  INFO 18184 --- [test_intern] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection ConnectionID:31 ClientConnectionId: c7e56a92-396f-447c-84ad-9d19b3dc915b
+2024-08-20T22:47:35.698+07:00  INFO 18184 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2024-08-20T22:47:35.699+07:00  WARN 18184 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: SQLServer2012Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-20T22:47:35.699+07:00  WARN 18184 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: SQLServer2012Dialect has been deprecated; use org.hibernate.dialect.SQLServerDialect instead
+2024-08-20T22:47:35.768+07:00  INFO 18184 --- [test_intern] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-20T22:47:36.541+07:00  INFO 18184 --- [test_intern] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T22:47:36.640+07:00  INFO 18184 --- [test_intern] [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static final long org.project4.test_intern.securityConfig.JwtAuthenticationEntryPoint.serialVersionUID
+2024-08-20T22:47:36.659+07:00  WARN 18184 --- [test_intern] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-20T22:47:36.790+07:00  INFO 18184 --- [test_intern] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-08-20T22:47:36.867+07:00  INFO 18184 --- [test_intern] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-20T22:47:36.883+07:00  INFO 18184 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-20T22:47:36.886+07:00  INFO 18184 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Started TestInternApplication in 1.881 seconds (process running for 324.484)
+2024-08-20T22:47:36.890+07:00  INFO 18184 --- [test_intern] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   SpringBootWebSecurityConfiguration.SecurityFilterChainConfiguration matched:
+      - AllNestedConditions 2 matched 0 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) did not find any beans; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   SpringBootWebSecurityConfiguration.WebSecurityEnablerConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+      - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2024-08-20T22:48:38.849+07:00  INFO 18184 --- [test_intern] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-08-20T22:48:38.866+07:00  INFO 18184 --- [test_intern] [Thread-14] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T22:48:38.866+07:00  INFO 18184 --- [test_intern] [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2024-08-20T22:48:38.868+07:00  INFO 18184 --- [test_intern] [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2024-08-20T22:48:38.959+07:00  INFO 18184 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Starting TestInternApplication using Java 21.0.2 with PID 18184 (D:\test\test_intern\target\classes started by ninhn in D:\test\test_intern)
+2024-08-20T22:48:38.960+07:00  INFO 18184 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-08-20T22:48:39.218+07:00  INFO 18184 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-20T22:48:39.241+07:00  INFO 18184 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 3 JPA repository interfaces.
+2024-08-20T22:48:39.350+07:00  WARN 18184 --- [test_intern] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-20T22:48:39.352+07:00  INFO 18184 --- [test_intern] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-08-20T22:48:39.413+07:00  INFO 18184 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-20T22:48:39.414+07:00  INFO 18184 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-20T22:48:39.414+07:00  INFO 18184 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-20T22:48:39.479+07:00  INFO 18184 --- [test_intern] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-08-20T22:48:39.479+07:00  INFO 18184 --- [test_intern] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 517 ms
+2024-08-20T22:48:39.554+07:00  INFO 18184 --- [test_intern] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-20T22:48:39.557+07:00  INFO 18184 --- [test_intern] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-20T22:48:39.569+07:00  INFO 18184 --- [test_intern] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-20T22:48:39.570+07:00  INFO 18184 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2024-08-20T22:48:39.592+07:00  INFO 18184 --- [test_intern] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection ConnectionID:41 ClientConnectionId: 60865491-d9da-4e7b-9c7a-80764eff72e5
+2024-08-20T22:48:39.593+07:00  INFO 18184 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2024-08-20T22:48:39.593+07:00  WARN 18184 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: SQLServer2012Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-20T22:48:39.593+07:00  WARN 18184 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: SQLServer2012Dialect has been deprecated; use org.hibernate.dialect.SQLServerDialect instead
+2024-08-20T22:48:39.642+07:00  INFO 18184 --- [test_intern] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-20T22:48:40.187+07:00  INFO 18184 --- [test_intern] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T22:48:40.286+07:00  INFO 18184 --- [test_intern] [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static final long org.project4.test_intern.securityConfig.JwtAuthenticationEntryPoint.serialVersionUID
+2024-08-20T22:48:40.309+07:00  WARN 18184 --- [test_intern] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-20T22:48:40.318+07:00  WARN 18184 --- [test_intern] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-08-20T22:48:40.489+07:00  INFO 18184 --- [test_intern] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-20T22:48:40.511+07:00  INFO 18184 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-20T22:48:40.515+07:00  INFO 18184 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Started TestInternApplication in 1.588 seconds (process running for 388.113)
+2024-08-20T22:48:40.517+07:00  INFO 18184 --- [test_intern] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+   SpringBootWebSecurityConfiguration.SecurityFilterChainConfiguration:
+      Did not match:
+         - AllNestedConditions 1 matched 1 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) found beans of type 'org.springframework.security.web.SecurityFilterChain' securityFilterChain; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   SpringBootWebSecurityConfiguration.WebSecurityEnablerConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) found beans named springSecurityFilterChain (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2024-08-20T22:49:02.475+07:00  INFO 18184 --- [test_intern] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-08-20T22:49:02.492+07:00  INFO 18184 --- [test_intern] [Thread-18] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T22:49:02.493+07:00  INFO 18184 --- [test_intern] [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2024-08-20T22:49:02.495+07:00  INFO 18184 --- [test_intern] [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2024-08-20T22:49:02.578+07:00  INFO 18184 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Starting TestInternApplication using Java 21.0.2 with PID 18184 (D:\test\test_intern\target\classes started by ninhn in D:\test\test_intern)
+2024-08-20T22:49:02.578+07:00  INFO 18184 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-08-20T22:49:02.865+07:00  INFO 18184 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-20T22:49:02.887+07:00  INFO 18184 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 3 JPA repository interfaces.
+2024-08-20T22:49:03.002+07:00  WARN 18184 --- [test_intern] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-20T22:49:03.004+07:00  INFO 18184 --- [test_intern] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-08-20T22:49:03.070+07:00  INFO 18184 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-20T22:49:03.071+07:00  INFO 18184 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-20T22:49:03.071+07:00  INFO 18184 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-20T22:49:03.127+07:00  INFO 18184 --- [test_intern] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-08-20T22:49:03.128+07:00  INFO 18184 --- [test_intern] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 548 ms
+2024-08-20T22:49:03.210+07:00  INFO 18184 --- [test_intern] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-20T22:49:03.215+07:00  INFO 18184 --- [test_intern] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-20T22:49:03.228+07:00  INFO 18184 --- [test_intern] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-20T22:49:03.229+07:00  INFO 18184 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2024-08-20T22:49:03.255+07:00  INFO 18184 --- [test_intern] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection ConnectionID:51 ClientConnectionId: ac06d2d9-232d-4d46-8edc-b83ed3286291
+2024-08-20T22:49:03.255+07:00  INFO 18184 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2024-08-20T22:49:03.256+07:00  WARN 18184 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: SQLServer2012Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-20T22:49:03.256+07:00  WARN 18184 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: SQLServer2012Dialect has been deprecated; use org.hibernate.dialect.SQLServerDialect instead
+2024-08-20T22:49:03.328+07:00  INFO 18184 --- [test_intern] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-20T22:49:04.046+07:00  INFO 18184 --- [test_intern] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T22:49:04.152+07:00  INFO 18184 --- [test_intern] [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static final long org.project4.test_intern.securityConfig.JwtAuthenticationEntryPoint.serialVersionUID
+2024-08-20T22:49:04.171+07:00  WARN 18184 --- [test_intern] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-20T22:49:04.297+07:00  INFO 18184 --- [test_intern] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-08-20T22:49:04.341+07:00  INFO 18184 --- [test_intern] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-20T22:49:04.361+07:00  INFO 18184 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-20T22:49:04.366+07:00  INFO 18184 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Started TestInternApplication in 1.818 seconds (process running for 411.964)
+2024-08-20T22:49:04.367+07:00  INFO 18184 --- [test_intern] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   SpringBootWebSecurityConfiguration.SecurityFilterChainConfiguration matched:
+      - AllNestedConditions 2 matched 0 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) did not find any beans; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   SpringBootWebSecurityConfiguration.WebSecurityEnablerConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+      - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2024-08-20T22:55:31.167+07:00  INFO 18184 --- [test_intern] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T22:55:31.168+07:00  INFO 18184 --- [test_intern] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2024-08-20T22:55:31.169+07:00  INFO 18184 --- [test_intern] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2024-08-20T22:55:36.956+07:00  INFO 3220 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Starting TestInternApplication using Java 21.0.2 with PID 3220 (D:\test\test_intern\target\classes started by ninhn in D:\test\test_intern)
+2024-08-20T22:55:36.958+07:00  INFO 3220 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-08-20T22:55:37.001+07:00  INFO 3220 --- [test_intern] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-20T22:55:37.001+07:00  INFO 3220 --- [test_intern] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-20T22:55:37.805+07:00  INFO 3220 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-20T22:55:37.873+07:00  INFO 3220 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 3 JPA repository interfaces.
+2024-08-20T22:55:38.198+07:00  WARN 3220 --- [test_intern] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-20T22:55:38.313+07:00  INFO 3220 --- [test_intern] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-08-20T22:55:38.696+07:00  INFO 3220 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-20T22:55:38.708+07:00  INFO 3220 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-20T22:55:38.708+07:00  INFO 3220 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-20T22:55:38.762+07:00  INFO 3220 --- [test_intern] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-20T22:55:38.763+07:00  INFO 3220 --- [test_intern] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1760 ms
+2024-08-20T22:55:39.097+07:00  INFO 3220 --- [test_intern] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-20T22:55:39.188+07:00  INFO 3220 --- [test_intern] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-20T22:55:39.234+07:00  INFO 3220 --- [test_intern] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-20T22:55:39.580+07:00  INFO 3220 --- [test_intern] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-20T22:55:39.612+07:00  INFO 3220 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-20T22:55:40.034+07:00  INFO 3220 --- [test_intern] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: ab363be6-0693-4373-a168-8680fec88326
+2024-08-20T22:55:40.036+07:00  INFO 3220 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-20T22:55:40.070+07:00  WARN 3220 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: SQLServer2012Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-20T22:55:40.071+07:00  WARN 3220 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: SQLServer2012Dialect has been deprecated; use org.hibernate.dialect.SQLServerDialect instead
+2024-08-20T22:55:41.118+07:00  INFO 3220 --- [test_intern] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-20T22:55:41.840+07:00  INFO 3220 --- [test_intern] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T22:55:42.493+07:00  INFO 3220 --- [test_intern] [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static final long org.project4.test_intern.securityConfig.JwtAuthenticationEntryPoint.serialVersionUID
+2024-08-20T22:55:42.554+07:00  WARN 3220 --- [test_intern] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-20T22:55:42.568+07:00  WARN 3220 --- [test_intern] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-08-20T22:55:43.041+07:00  INFO 3220 --- [test_intern] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-20T22:55:43.075+07:00  INFO 3220 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-20T22:55:43.082+07:00  INFO 3220 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Started TestInternApplication in 6.658 seconds (process running for 7.54)
+2024-08-20T22:55:50.626+07:00  INFO 3220 --- [test_intern] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-20T22:55:50.626+07:00  INFO 3220 --- [test_intern] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-20T22:55:50.628+07:00  INFO 3220 --- [test_intern] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-08-20T23:00:41.812+07:00  INFO 3220 --- [test_intern] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2024-08-20T23:00:41.839+07:00  INFO 3220 --- [test_intern] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T23:00:41.843+07:00  INFO 3220 --- [test_intern] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-20T23:00:41.845+07:00  INFO 3220 --- [test_intern] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-20T23:00:42.013+07:00  INFO 3220 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Starting TestInternApplication using Java 21.0.2 with PID 3220 (D:\test\test_intern\target\classes started by ninhn in D:\test\test_intern)
+2024-08-20T23:00:42.013+07:00  INFO 3220 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-08-20T23:00:42.437+07:00  INFO 3220 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-20T23:00:42.461+07:00  INFO 3220 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 3 JPA repository interfaces.
+2024-08-20T23:00:42.608+07:00  WARN 3220 --- [test_intern] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-20T23:00:42.610+07:00  INFO 3220 --- [test_intern] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-08-20T23:00:42.717+07:00  INFO 3220 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-20T23:00:42.719+07:00  INFO 3220 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-20T23:00:42.720+07:00  INFO 3220 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-20T23:00:42.757+07:00  INFO 3220 --- [test_intern] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-20T23:00:42.757+07:00  INFO 3220 --- [test_intern] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 739 ms
+2024-08-20T23:00:42.838+07:00  INFO 3220 --- [test_intern] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-20T23:00:42.843+07:00  INFO 3220 --- [test_intern] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-20T23:00:42.859+07:00  INFO 3220 --- [test_intern] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-20T23:00:42.861+07:00  INFO 3220 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-08-20T23:00:42.915+07:00  INFO 3220 --- [test_intern] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection ConnectionID:11 ClientConnectionId: 95e661c3-77db-45a2-bc55-21f0d9d5b24f
+2024-08-20T23:00:42.916+07:00  INFO 3220 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-08-20T23:00:42.918+07:00  WARN 3220 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: SQLServer2012Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-20T23:00:42.918+07:00  WARN 3220 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: SQLServer2012Dialect has been deprecated; use org.hibernate.dialect.SQLServerDialect instead
+2024-08-20T23:00:42.995+07:00  INFO 3220 --- [test_intern] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-20T23:00:43.901+07:00  INFO 3220 --- [test_intern] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T23:00:44.037+07:00  INFO 3220 --- [test_intern] [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static final long org.project4.test_intern.securityConfig.JwtAuthenticationEntryPoint.serialVersionUID
+2024-08-20T23:00:44.042+07:00  WARN 3220 --- [test_intern] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig': Unsatisfied dependency expressed through field 'jwtRequestFilter': No qualifying bean of type 'org.project4.test_intern.securityConfig.JwtRequestFilter' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-08-20T23:00:44.043+07:00  INFO 3220 --- [test_intern] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T23:00:44.043+07:00  INFO 3220 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-08-20T23:00:44.045+07:00  INFO 3220 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-08-20T23:00:44.046+07:00  INFO 3220 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-08-20T23:00:44.052+07:00  INFO 3220 --- [test_intern] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-20T23:00:44.082+07:00 ERROR 3220 --- [test_intern] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field jwtRequestFilter in org.project4.test_intern.securityConfig.SecurityConfig required a bean of type 'org.project4.test_intern.securityConfig.JwtRequestFilter' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.project4.test_intern.securityConfig.JwtRequestFilter' in your configuration.
+
+2024-08-20T23:00:45.583+07:00  INFO 3220 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Starting TestInternApplication using Java 21.0.2 with PID 3220 (D:\test\test_intern\target\classes started by ninhn in D:\test\test_intern)
+2024-08-20T23:00:45.583+07:00  INFO 3220 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-08-20T23:00:45.915+07:00  INFO 3220 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-20T23:00:45.937+07:00  INFO 3220 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 3 JPA repository interfaces.
+2024-08-20T23:00:46.040+07:00  WARN 3220 --- [test_intern] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-20T23:00:46.042+07:00  INFO 3220 --- [test_intern] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-08-20T23:00:46.110+07:00  INFO 3220 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-20T23:00:46.113+07:00  INFO 3220 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-20T23:00:46.113+07:00  INFO 3220 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-20T23:00:46.193+07:00  INFO 3220 --- [test_intern] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-08-20T23:00:46.193+07:00  INFO 3220 --- [test_intern] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 607 ms
+2024-08-20T23:00:46.286+07:00  INFO 3220 --- [test_intern] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-20T23:00:46.291+07:00  INFO 3220 --- [test_intern] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-20T23:00:46.316+07:00  INFO 3220 --- [test_intern] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-20T23:00:46.317+07:00  INFO 3220 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-08-20T23:00:46.338+07:00  INFO 3220 --- [test_intern] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection ConnectionID:21 ClientConnectionId: 9c89a925-f949-4c95-9a9d-3aeefdbd2dd7
+2024-08-20T23:00:46.338+07:00  INFO 3220 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-08-20T23:00:46.339+07:00  WARN 3220 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: SQLServer2012Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-20T23:00:46.339+07:00  WARN 3220 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: SQLServer2012Dialect has been deprecated; use org.hibernate.dialect.SQLServerDialect instead
+2024-08-20T23:00:46.419+07:00  INFO 3220 --- [test_intern] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-20T23:00:46.490+07:00  INFO 3220 --- [test_intern] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T23:00:46.579+07:00  INFO 3220 --- [test_intern] [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static final long org.project4.test_intern.securityConfig.JwtAuthenticationEntryPoint.serialVersionUID
+2024-08-20T23:00:46.581+07:00  WARN 3220 --- [test_intern] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'securityConfig' defined in file [D:\test\test_intern\target\classes\org\project4\test_intern\securityConfig\SecurityConfig.class]: Post-processing of merged bean definition failed
+2024-08-20T23:00:46.582+07:00  INFO 3220 --- [test_intern] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T23:00:46.582+07:00  INFO 3220 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-08-20T23:00:46.625+07:00  INFO 3220 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2024-08-20T23:00:46.625+07:00  INFO 3220 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-08-20T23:00:46.631+07:00  INFO 3220 --- [test_intern] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-20T23:00:46.636+07:00 ERROR 3220 --- [test_intern] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'securityConfig' defined in file [D:\test\test_intern\target\classes\org\project4\test_intern\securityConfig\SecurityConfig.class]: Post-processing of merged bean definition failed
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:577) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.project4.test_intern.TestInternApplication.main(TestInternApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.2.jar:3.3.2]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.project4.test_intern.securityConfig.SecurityConfig] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@5ef900ff]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:757) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.ReflectionUtils.doWithLocalFields(ReflectionUtils.java:689) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.buildPersistenceMetadata(PersistenceAnnotationBeanPostProcessor.java:436) ~[spring-orm-6.1.11.jar:6.1.11]
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.findPersistenceMetadata(PersistenceAnnotationBeanPostProcessor.java:417) ~[spring-orm-6.1.11.jar:6.1.11]
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.findInjectionMetadata(PersistenceAnnotationBeanPostProcessor.java:376) ~[spring-orm-6.1.11.jar:6.1.11]
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(PersistenceAnnotationBeanPostProcessor.java:353) ~[spring-orm-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1103) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:574) ~[spring-beans-6.1.11.jar:6.1.11]
+	... 18 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/project4/test_intern/config/RequestContextFilter
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3473) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2542) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:752) ~[spring-core-6.1.11.jar:6.1.11]
+	... 25 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.project4.test_intern.config.RequestContextFilter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:534) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:513) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.3.2.jar:3.3.2]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[na:na]
+	... 29 common frames omitted
+
+2024-08-20T23:01:02.639+07:00  INFO 4420 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Starting TestInternApplication using Java 21.0.2 with PID 4420 (D:\test\test_intern\target\classes started by ninhn in D:\test\test_intern)
+2024-08-20T23:01:02.643+07:00  INFO 4420 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-08-20T23:01:02.710+07:00  INFO 4420 --- [test_intern] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-20T23:01:02.710+07:00  INFO 4420 --- [test_intern] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-20T23:01:03.523+07:00  INFO 4420 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-20T23:01:03.584+07:00  INFO 4420 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 3 JPA repository interfaces.
+2024-08-20T23:01:03.897+07:00  WARN 4420 --- [test_intern] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-20T23:01:03.933+07:00  INFO 4420 --- [test_intern] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-08-20T23:01:04.236+07:00  INFO 4420 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-20T23:01:04.249+07:00  INFO 4420 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-20T23:01:04.249+07:00  INFO 4420 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-20T23:01:04.329+07:00  INFO 4420 --- [test_intern] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-20T23:01:04.330+07:00  INFO 4420 --- [test_intern] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1617 ms
+2024-08-20T23:01:04.578+07:00  INFO 4420 --- [test_intern] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-20T23:01:04.644+07:00  INFO 4420 --- [test_intern] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-20T23:01:04.676+07:00  INFO 4420 --- [test_intern] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-20T23:01:04.971+07:00  INFO 4420 --- [test_intern] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-20T23:01:04.994+07:00  INFO 4420 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-20T23:01:05.298+07:00  INFO 4420 --- [test_intern] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 284e318a-b8e5-4978-ac62-9832949130e8
+2024-08-20T23:01:05.300+07:00  INFO 4420 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-20T23:01:05.328+07:00  WARN 4420 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: SQLServer2012Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-20T23:01:05.329+07:00  WARN 4420 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: SQLServer2012Dialect has been deprecated; use org.hibernate.dialect.SQLServerDialect instead
+2024-08-20T23:01:06.184+07:00  INFO 4420 --- [test_intern] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-20T23:01:06.972+07:00  INFO 4420 --- [test_intern] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T23:01:07.633+07:00  INFO 4420 --- [test_intern] [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static final long org.project4.test_intern.securityConfig.JwtAuthenticationEntryPoint.serialVersionUID
+2024-08-20T23:01:07.694+07:00  WARN 4420 --- [test_intern] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-20T23:01:07.709+07:00  WARN 4420 --- [test_intern] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-08-20T23:01:08.168+07:00  INFO 4420 --- [test_intern] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-20T23:01:08.230+07:00  INFO 4420 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-20T23:01:08.239+07:00  INFO 4420 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Started TestInternApplication in 6.233 seconds (process running for 7.174)
+2024-08-20T23:01:12.971+07:00  INFO 4420 --- [test_intern] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-20T23:01:12.971+07:00  INFO 4420 --- [test_intern] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-20T23:01:12.973+07:00  INFO 4420 --- [test_intern] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-20T23:05:17.837+07:00  INFO 4420 --- [test_intern] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T23:05:17.841+07:00  INFO 4420 --- [test_intern] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-20T23:05:17.843+07:00  INFO 4420 --- [test_intern] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-20T23:05:23.433+07:00  INFO 11372 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Starting TestInternApplication using Java 21.0.2 with PID 11372 (D:\test\test_intern\target\classes started by ninhn in D:\test\test_intern)
+2024-08-20T23:05:23.436+07:00  INFO 11372 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-08-20T23:05:23.489+07:00  INFO 11372 --- [test_intern] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-20T23:05:23.490+07:00  INFO 11372 --- [test_intern] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-20T23:05:24.202+07:00  INFO 11372 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-20T23:05:24.267+07:00  INFO 11372 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 3 JPA repository interfaces.
+2024-08-20T23:05:24.568+07:00  WARN 11372 --- [test_intern] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-20T23:05:24.603+07:00  INFO 11372 --- [test_intern] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-08-20T23:05:24.901+07:00  INFO 11372 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-20T23:05:24.911+07:00  INFO 11372 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-20T23:05:24.912+07:00  INFO 11372 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-20T23:05:24.985+07:00  INFO 11372 --- [test_intern] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-20T23:05:24.986+07:00  INFO 11372 --- [test_intern] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1495 ms
+2024-08-20T23:05:25.227+07:00  INFO 11372 --- [test_intern] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-20T23:05:25.287+07:00  INFO 11372 --- [test_intern] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-20T23:05:25.317+07:00  INFO 11372 --- [test_intern] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-20T23:05:25.603+07:00  INFO 11372 --- [test_intern] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-20T23:05:25.626+07:00  INFO 11372 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-20T23:05:25.889+07:00  INFO 11372 --- [test_intern] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 50690899-0c86-4c92-bfad-55465f6c19d0
+2024-08-20T23:05:25.891+07:00  INFO 11372 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-20T23:05:25.915+07:00  WARN 11372 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: SQLServer2012Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-20T23:05:25.916+07:00  WARN 11372 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: SQLServer2012Dialect has been deprecated; use org.hibernate.dialect.SQLServerDialect instead
+2024-08-20T23:05:26.754+07:00  INFO 11372 --- [test_intern] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-20T23:05:27.671+07:00  INFO 11372 --- [test_intern] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T23:05:28.301+07:00  INFO 11372 --- [test_intern] [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static final long org.project4.test_intern.securityConfig.JwtAuthenticationEntryPoint.serialVersionUID
+2024-08-20T23:05:28.366+07:00  WARN 11372 --- [test_intern] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-20T23:05:28.383+07:00  WARN 11372 --- [test_intern] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-08-20T23:05:28.863+07:00  INFO 11372 --- [test_intern] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-20T23:05:28.902+07:00  INFO 11372 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-20T23:05:28.914+07:00  INFO 11372 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Started TestInternApplication in 5.949 seconds (process running for 6.787)
+2024-08-20T23:05:33.462+07:00  INFO 11372 --- [test_intern] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-20T23:05:33.462+07:00  INFO 11372 --- [test_intern] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-20T23:05:33.463+07:00  INFO 11372 --- [test_intern] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-20T23:06:32.607+07:00  INFO 11372 --- [test_intern] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T23:06:32.610+07:00  INFO 11372 --- [test_intern] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-20T23:06:32.612+07:00  INFO 11372 --- [test_intern] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-20T23:06:37.742+07:00  INFO 20264 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Starting TestInternApplication using Java 21.0.2 with PID 20264 (D:\test\test_intern\target\classes started by ninhn in D:\test\test_intern)
+2024-08-20T23:06:37.744+07:00  INFO 20264 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-08-20T23:06:37.802+07:00  INFO 20264 --- [test_intern] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-20T23:06:37.803+07:00  INFO 20264 --- [test_intern] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-20T23:06:38.555+07:00  INFO 20264 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-20T23:06:38.649+07:00  INFO 20264 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84 ms. Found 3 JPA repository interfaces.
+2024-08-20T23:06:38.973+07:00  WARN 20264 --- [test_intern] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-20T23:06:39.006+07:00  INFO 20264 --- [test_intern] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-08-20T23:06:39.308+07:00  INFO 20264 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-20T23:06:39.318+07:00  INFO 20264 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-20T23:06:39.318+07:00  INFO 20264 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-20T23:06:39.382+07:00  INFO 20264 --- [test_intern] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-20T23:06:39.383+07:00  INFO 20264 --- [test_intern] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1579 ms
+2024-08-20T23:06:39.634+07:00  INFO 20264 --- [test_intern] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-20T23:06:39.690+07:00  INFO 20264 --- [test_intern] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-20T23:06:39.722+07:00  INFO 20264 --- [test_intern] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-20T23:06:40.010+07:00  INFO 20264 --- [test_intern] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-20T23:06:40.038+07:00  INFO 20264 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-20T23:06:40.314+07:00  INFO 20264 --- [test_intern] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: ee596efb-913d-478e-ac8f-faf436497d3e
+2024-08-20T23:06:40.316+07:00  INFO 20264 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-20T23:06:40.344+07:00  WARN 20264 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: SQLServer2012Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-20T23:06:40.345+07:00  WARN 20264 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: SQLServer2012Dialect has been deprecated; use org.hibernate.dialect.SQLServerDialect instead
+2024-08-20T23:06:41.210+07:00  INFO 20264 --- [test_intern] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-20T23:06:41.959+07:00  INFO 20264 --- [test_intern] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T23:06:42.592+07:00  INFO 20264 --- [test_intern] [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static final long org.project4.test_intern.securityConfig.JwtAuthenticationEntryPoint.serialVersionUID
+2024-08-20T23:06:42.657+07:00  WARN 20264 --- [test_intern] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-20T23:06:42.672+07:00  WARN 20264 --- [test_intern] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-08-20T23:06:43.135+07:00  INFO 20264 --- [test_intern] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-20T23:06:43.187+07:00  INFO 20264 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-20T23:06:43.194+07:00  INFO 20264 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Started TestInternApplication in 5.955 seconds (process running for 6.82)
+2024-08-20T23:06:49.769+07:00  INFO 20264 --- [test_intern] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-20T23:06:49.769+07:00  INFO 20264 --- [test_intern] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-20T23:06:49.771+07:00  INFO 20264 --- [test_intern] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-08-20T23:09:58.202+07:00  INFO 20264 --- [test_intern] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T23:09:58.206+07:00  INFO 20264 --- [test_intern] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-20T23:09:58.208+07:00  INFO 20264 --- [test_intern] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-20T23:10:03.529+07:00  INFO 17748 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Starting TestInternApplication using Java 21.0.2 with PID 17748 (D:\test\test_intern\target\classes started by ninhn in D:\test\test_intern)
+2024-08-20T23:10:03.531+07:00  INFO 17748 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-08-20T23:10:03.580+07:00  INFO 17748 --- [test_intern] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-20T23:10:03.580+07:00  INFO 17748 --- [test_intern] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-20T23:10:04.269+07:00  INFO 17748 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-20T23:10:04.333+07:00  INFO 17748 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 3 JPA repository interfaces.
+2024-08-20T23:10:04.645+07:00  WARN 17748 --- [test_intern] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-20T23:10:04.686+07:00  INFO 17748 --- [test_intern] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-08-20T23:10:04.977+07:00  INFO 17748 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-20T23:10:04.987+07:00  INFO 17748 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-20T23:10:04.988+07:00  INFO 17748 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-20T23:10:05.036+07:00  INFO 17748 --- [test_intern] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-20T23:10:05.037+07:00  INFO 17748 --- [test_intern] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1456 ms
+2024-08-20T23:10:05.284+07:00  INFO 17748 --- [test_intern] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-20T23:10:05.344+07:00  INFO 17748 --- [test_intern] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-20T23:10:05.376+07:00  INFO 17748 --- [test_intern] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-20T23:10:05.667+07:00  INFO 17748 --- [test_intern] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-20T23:10:05.691+07:00  INFO 17748 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-20T23:10:05.961+07:00  INFO 17748 --- [test_intern] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 2c429aaa-a4f9-4bb8-91ea-334f79b902ea
+2024-08-20T23:10:05.962+07:00  INFO 17748 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-20T23:10:05.988+07:00  WARN 17748 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: SQLServer2012Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-20T23:10:05.989+07:00  WARN 17748 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: SQLServer2012Dialect has been deprecated; use org.hibernate.dialect.SQLServerDialect instead
+2024-08-20T23:10:06.833+07:00  INFO 17748 --- [test_intern] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-20T23:10:07.725+07:00  INFO 17748 --- [test_intern] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T23:10:08.373+07:00  INFO 17748 --- [test_intern] [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static final long org.project4.test_intern.securityConfig.JwtAuthenticationEntryPoint.serialVersionUID
+2024-08-20T23:10:08.439+07:00  WARN 17748 --- [test_intern] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-20T23:10:08.459+07:00  WARN 17748 --- [test_intern] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-08-20T23:10:08.914+07:00  INFO 17748 --- [test_intern] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-20T23:10:08.946+07:00  INFO 17748 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-20T23:10:08.954+07:00  INFO 17748 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Started TestInternApplication in 5.901 seconds (process running for 6.732)
+2024-08-20T23:11:03.672+07:00  INFO 17748 --- [test_intern] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-20T23:11:03.673+07:00  INFO 17748 --- [test_intern] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-20T23:11:03.675+07:00  INFO 17748 --- [test_intern] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-08-20T23:11:51.337+07:00  WARN 17748 --- [test_intern] [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded]
+2024-08-20T23:11:51.345+07:00  WARN 17748 --- [test_intern] [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded]
+2024-08-20T23:14:34.275+07:00  INFO 17748 --- [test_intern] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T23:14:34.278+07:00  INFO 17748 --- [test_intern] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-20T23:14:34.281+07:00  INFO 17748 --- [test_intern] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-20T23:14:37.020+07:00  INFO 16780 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Starting TestInternApplication using Java 21.0.2 with PID 16780 (D:\test\test_intern\target\classes started by ninhn in D:\test\test_intern)
+2024-08-20T23:14:37.023+07:00  INFO 16780 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-08-20T23:14:37.069+07:00  INFO 16780 --- [test_intern] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-20T23:14:37.069+07:00  INFO 16780 --- [test_intern] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-20T23:14:37.768+07:00  INFO 16780 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-20T23:14:37.832+07:00  INFO 16780 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 3 JPA repository interfaces.
+2024-08-20T23:14:38.143+07:00  WARN 16780 --- [test_intern] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-20T23:14:38.177+07:00  INFO 16780 --- [test_intern] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-08-20T23:14:38.491+07:00  INFO 16780 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-20T23:14:38.502+07:00  INFO 16780 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-20T23:14:38.502+07:00  INFO 16780 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-20T23:14:38.550+07:00  INFO 16780 --- [test_intern] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-20T23:14:38.550+07:00  INFO 16780 --- [test_intern] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1480 ms
+2024-08-20T23:14:38.796+07:00  INFO 16780 --- [test_intern] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-20T23:14:38.864+07:00  INFO 16780 --- [test_intern] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-20T23:14:38.894+07:00  INFO 16780 --- [test_intern] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-20T23:14:39.174+07:00  INFO 16780 --- [test_intern] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-20T23:14:39.202+07:00  INFO 16780 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-20T23:14:39.500+07:00  INFO 16780 --- [test_intern] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 6fd5a676-a580-4a5c-a5d7-6dae445958fd
+2024-08-20T23:14:39.502+07:00  INFO 16780 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-20T23:14:39.526+07:00  WARN 16780 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: SQLServer2012Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-20T23:14:39.527+07:00  WARN 16780 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: SQLServer2012Dialect has been deprecated; use org.hibernate.dialect.SQLServerDialect instead
+2024-08-20T23:14:40.467+07:00  INFO 16780 --- [test_intern] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-20T23:14:41.142+07:00  INFO 16780 --- [test_intern] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T23:14:41.848+07:00  INFO 16780 --- [test_intern] [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static final long org.project4.test_intern.securityConfig.JwtAuthenticationEntryPoint.serialVersionUID
+2024-08-20T23:14:41.916+07:00  WARN 16780 --- [test_intern] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-20T23:14:41.932+07:00  WARN 16780 --- [test_intern] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-08-20T23:14:42.426+07:00  INFO 16780 --- [test_intern] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-20T23:14:42.465+07:00  INFO 16780 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-20T23:14:42.474+07:00  INFO 16780 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Started TestInternApplication in 5.958 seconds (process running for 6.779)
+2024-08-20T23:15:02.308+07:00  INFO 16780 --- [test_intern] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-20T23:15:02.310+07:00  INFO 16780 --- [test_intern] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-20T23:15:02.310+07:00  INFO 16780 --- [test_intern] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-08-20T23:15:02.410+07:00  INFO 16780 --- [test_intern] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-20T23:15:02.736+07:00  WARN 16780 --- [test_intern] [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.context.request.async.AsyncRequestNotUsableException: ServletOutputStream failed to flush: java.nio.channels.ClosedChannelException]
+2024-08-20T23:15:02.741+07:00  INFO 16780 --- [test_intern] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T23:15:02.744+07:00  INFO 16780 --- [test_intern] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-20T23:15:02.747+07:00  INFO 16780 --- [test_intern] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-20T23:15:02.891+07:00  INFO 16780 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Starting TestInternApplication using Java 21.0.2 with PID 16780 (D:\test\test_intern\target\classes started by ninhn in D:\test\test_intern)
+2024-08-20T23:15:02.892+07:00  INFO 16780 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-08-20T23:15:03.197+07:00  INFO 16780 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-20T23:15:03.217+07:00  INFO 16780 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 3 JPA repository interfaces.
+2024-08-20T23:15:03.298+07:00  WARN 16780 --- [test_intern] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-20T23:15:03.300+07:00  INFO 16780 --- [test_intern] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-08-20T23:15:03.381+07:00  INFO 16780 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-20T23:15:03.382+07:00  INFO 16780 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-20T23:15:03.383+07:00  INFO 16780 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-20T23:15:03.409+07:00  INFO 16780 --- [test_intern] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-20T23:15:03.409+07:00  INFO 16780 --- [test_intern] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 514 ms
+2024-08-20T23:15:03.472+07:00  INFO 16780 --- [test_intern] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-20T23:15:03.476+07:00  INFO 16780 --- [test_intern] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-20T23:15:03.487+07:00  INFO 16780 --- [test_intern] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-20T23:15:03.488+07:00  INFO 16780 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-08-20T23:15:03.505+07:00  INFO 16780 --- [test_intern] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection ConnectionID:11 ClientConnectionId: c193dee5-db95-4360-8960-65cd72c1a79e
+2024-08-20T23:15:03.505+07:00  INFO 16780 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-08-20T23:15:03.505+07:00  WARN 16780 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: SQLServer2012Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-20T23:15:03.506+07:00  WARN 16780 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: SQLServer2012Dialect has been deprecated; use org.hibernate.dialect.SQLServerDialect instead
+2024-08-20T23:15:03.566+07:00  INFO 16780 --- [test_intern] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-20T23:15:03.654+07:00  INFO 16780 --- [test_intern] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T23:15:03.760+07:00  INFO 16780 --- [test_intern] [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static final long org.project4.test_intern.securityConfig.JwtAuthenticationEntryPoint.serialVersionUID
+2024-08-20T23:15:03.779+07:00  WARN 16780 --- [test_intern] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-20T23:15:03.786+07:00  WARN 16780 --- [test_intern] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-08-20T23:15:03.917+07:00  INFO 16780 --- [test_intern] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-20T23:15:03.930+07:00  INFO 16780 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-20T23:15:03.933+07:00  INFO 16780 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Started TestInternApplication in 1.095 seconds (process running for 28.239)
+2024-08-20T23:15:03.936+07:00  INFO 16780 --- [test_intern] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-20T23:15:08.600+07:00  INFO 16780 --- [test_intern] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-20T23:15:08.601+07:00  INFO 16780 --- [test_intern] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-20T23:15:08.602+07:00  INFO 16780 --- [test_intern] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-20T23:15:14.043+07:00  WARN 16780 --- [test_intern] [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded]
+2024-08-20T23:15:14.050+07:00  WARN 16780 --- [test_intern] [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded]
+2024-08-20T23:15:36.303+07:00  INFO 16780 --- [test_intern] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T23:15:36.305+07:00  INFO 16780 --- [test_intern] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-08-20T23:15:36.305+07:00  INFO 16780 --- [test_intern] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-08-20T23:15:42.230+07:00  INFO 7536 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Starting TestInternApplication using Java 21.0.2 with PID 7536 (D:\test\test_intern\target\classes started by ninhn in D:\test\test_intern)
+2024-08-20T23:15:42.232+07:00  INFO 7536 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-08-20T23:15:42.285+07:00  INFO 7536 --- [test_intern] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-20T23:15:42.285+07:00  INFO 7536 --- [test_intern] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-20T23:15:42.976+07:00  INFO 7536 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-20T23:15:43.037+07:00  INFO 7536 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 3 JPA repository interfaces.
+2024-08-20T23:15:43.349+07:00  WARN 7536 --- [test_intern] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-20T23:15:43.382+07:00  INFO 7536 --- [test_intern] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-08-20T23:15:43.678+07:00  INFO 7536 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-20T23:15:43.689+07:00  INFO 7536 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-20T23:15:43.690+07:00  INFO 7536 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-20T23:15:43.738+07:00  INFO 7536 --- [test_intern] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-20T23:15:43.738+07:00  INFO 7536 --- [test_intern] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1452 ms
+2024-08-20T23:15:43.989+07:00  INFO 7536 --- [test_intern] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-20T23:15:44.049+07:00  INFO 7536 --- [test_intern] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-20T23:15:44.082+07:00  INFO 7536 --- [test_intern] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-20T23:15:44.369+07:00  INFO 7536 --- [test_intern] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-20T23:15:44.393+07:00  INFO 7536 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-20T23:15:44.686+07:00  INFO 7536 --- [test_intern] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 0f4b6522-e803-4d3a-a393-fc96dd10b77b
+2024-08-20T23:15:44.688+07:00  INFO 7536 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-20T23:15:44.716+07:00  WARN 7536 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: SQLServer2012Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-20T23:15:44.718+07:00  WARN 7536 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: SQLServer2012Dialect has been deprecated; use org.hibernate.dialect.SQLServerDialect instead
+2024-08-20T23:15:45.556+07:00  INFO 7536 --- [test_intern] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-20T23:15:46.173+07:00  INFO 7536 --- [test_intern] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T23:15:46.844+07:00  INFO 7536 --- [test_intern] [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static final long org.project4.test_intern.securityConfig.JwtAuthenticationEntryPoint.serialVersionUID
+2024-08-20T23:15:46.911+07:00  WARN 7536 --- [test_intern] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-20T23:15:46.925+07:00  WARN 7536 --- [test_intern] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-08-20T23:15:47.418+07:00  INFO 7536 --- [test_intern] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-20T23:15:47.453+07:00  INFO 7536 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-20T23:15:47.462+07:00  INFO 7536 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Started TestInternApplication in 5.732 seconds (process running for 6.548)
+2024-08-20T23:15:52.496+07:00  INFO 7536 --- [test_intern] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-20T23:15:52.497+07:00  INFO 7536 --- [test_intern] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-20T23:15:52.498+07:00  INFO 7536 --- [test_intern] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-20T23:15:54.677+07:00  WARN 7536 --- [test_intern] [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded]
+2024-08-20T23:15:54.683+07:00  WARN 7536 --- [test_intern] [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded]
+2024-08-20T23:17:52.442+07:00  INFO 7536 --- [test_intern] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-08-20T23:17:52.470+07:00  INFO 7536 --- [test_intern] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T23:17:52.475+07:00  INFO 7536 --- [test_intern] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-20T23:17:52.478+07:00  INFO 7536 --- [test_intern] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-20T23:17:52.591+07:00  INFO 7536 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Starting TestInternApplication using Java 21.0.2 with PID 7536 (D:\test\test_intern\target\classes started by ninhn in D:\test\test_intern)
+2024-08-20T23:17:52.591+07:00  INFO 7536 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-08-20T23:17:52.882+07:00  INFO 7536 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-20T23:17:52.905+07:00  INFO 7536 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 3 JPA repository interfaces.
+2024-08-20T23:17:53.005+07:00  WARN 7536 --- [test_intern] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-20T23:17:53.006+07:00  INFO 7536 --- [test_intern] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-08-20T23:17:53.071+07:00  INFO 7536 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-20T23:17:53.072+07:00  INFO 7536 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-20T23:17:53.072+07:00  INFO 7536 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-20T23:17:53.107+07:00  INFO 7536 --- [test_intern] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-20T23:17:53.107+07:00  INFO 7536 --- [test_intern] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 514 ms
+2024-08-20T23:17:53.187+07:00  INFO 7536 --- [test_intern] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-20T23:17:53.191+07:00  INFO 7536 --- [test_intern] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-20T23:17:53.204+07:00  INFO 7536 --- [test_intern] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-20T23:17:53.205+07:00  INFO 7536 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-08-20T23:17:53.231+07:00  INFO 7536 --- [test_intern] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection ConnectionID:11 ClientConnectionId: 1df51499-a0bf-4434-9569-627005995337
+2024-08-20T23:17:53.231+07:00  INFO 7536 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-08-20T23:17:53.232+07:00  WARN 7536 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: SQLServer2012Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-20T23:17:53.232+07:00  WARN 7536 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: SQLServer2012Dialect has been deprecated; use org.hibernate.dialect.SQLServerDialect instead
+2024-08-20T23:17:53.330+07:00  INFO 7536 --- [test_intern] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-20T23:17:54.115+07:00  INFO 7536 --- [test_intern] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T23:17:54.226+07:00  INFO 7536 --- [test_intern] [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static final long org.project4.test_intern.securityConfig.JwtAuthenticationEntryPoint.serialVersionUID
+2024-08-20T23:17:54.260+07:00  WARN 7536 --- [test_intern] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-20T23:17:54.270+07:00  WARN 7536 --- [test_intern] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-08-20T23:17:54.558+07:00  INFO 7536 --- [test_intern] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-20T23:17:54.585+07:00  INFO 7536 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-20T23:17:54.589+07:00  INFO 7536 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Started TestInternApplication in 2.043 seconds (process running for 133.675)
+2024-08-20T23:17:54.591+07:00  INFO 7536 --- [test_intern] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-20T23:18:03.479+07:00  INFO 7536 --- [test_intern] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T23:18:03.480+07:00  INFO 7536 --- [test_intern] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-08-20T23:18:03.481+07:00  INFO 7536 --- [test_intern] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-08-20T23:18:09.157+07:00  INFO 19920 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Starting TestInternApplication using Java 21.0.2 with PID 19920 (D:\test\test_intern\target\classes started by ninhn in D:\test\test_intern)
+2024-08-20T23:18:09.159+07:00  INFO 19920 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-08-20T23:18:09.206+07:00  INFO 19920 --- [test_intern] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-20T23:18:09.206+07:00  INFO 19920 --- [test_intern] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-20T23:18:09.908+07:00  INFO 19920 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-20T23:18:09.970+07:00  INFO 19920 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 3 JPA repository interfaces.
+2024-08-20T23:18:10.282+07:00  WARN 19920 --- [test_intern] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-20T23:18:10.317+07:00  INFO 19920 --- [test_intern] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-08-20T23:18:10.624+07:00  INFO 19920 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-20T23:18:10.635+07:00  INFO 19920 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-20T23:18:10.635+07:00  INFO 19920 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-20T23:18:10.684+07:00  INFO 19920 --- [test_intern] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-20T23:18:10.685+07:00  INFO 19920 --- [test_intern] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1479 ms
+2024-08-20T23:18:10.940+07:00  INFO 19920 --- [test_intern] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-20T23:18:10.997+07:00  INFO 19920 --- [test_intern] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-20T23:18:11.027+07:00  INFO 19920 --- [test_intern] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-20T23:18:11.314+07:00  INFO 19920 --- [test_intern] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-20T23:18:11.338+07:00  INFO 19920 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-20T23:18:11.610+07:00  INFO 19920 --- [test_intern] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 40f14ea2-9b32-4112-b057-13ee81c46ab2
+2024-08-20T23:18:11.612+07:00  INFO 19920 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-20T23:18:11.637+07:00  WARN 19920 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: SQLServer2012Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-20T23:18:11.638+07:00  WARN 19920 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: SQLServer2012Dialect has been deprecated; use org.hibernate.dialect.SQLServerDialect instead
+2024-08-20T23:18:12.489+07:00  INFO 19920 --- [test_intern] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-20T23:18:12.605+07:00  INFO 19920 --- [test_intern] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T23:18:13.233+07:00  INFO 19920 --- [test_intern] [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static final long org.project4.test_intern.securityConfig.JwtAuthenticationEntryPoint.serialVersionUID
+2024-08-20T23:18:13.297+07:00  WARN 19920 --- [test_intern] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-20T23:18:13.311+07:00  WARN 19920 --- [test_intern] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-08-20T23:18:13.782+07:00  INFO 19920 --- [test_intern] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-20T23:18:13.822+07:00  INFO 19920 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-20T23:18:13.830+07:00  INFO 19920 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Started TestInternApplication in 5.156 seconds (process running for 6.142)
+2024-08-20T23:18:21.524+07:00  INFO 19920 --- [test_intern] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-20T23:18:21.524+07:00  INFO 19920 --- [test_intern] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-20T23:18:21.525+07:00  INFO 19920 --- [test_intern] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-20T23:18:24.306+07:00  WARN 19920 --- [test_intern] [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded]
+2024-08-20T23:18:24.313+07:00  WARN 19920 --- [test_intern] [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded]
+2024-08-20T23:20:00.191+07:00  INFO 19920 --- [test_intern] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-08-20T23:20:00.214+07:00  INFO 19920 --- [test_intern] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T23:20:00.219+07:00  INFO 19920 --- [test_intern] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-20T23:20:00.222+07:00  INFO 19920 --- [test_intern] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-20T23:20:00.360+07:00  INFO 19920 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Starting TestInternApplication using Java 21.0.2 with PID 19920 (D:\test\test_intern\target\classes started by ninhn in D:\test\test_intern)
+2024-08-20T23:20:00.361+07:00  INFO 19920 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-08-20T23:20:00.647+07:00  INFO 19920 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-20T23:20:00.672+07:00  INFO 19920 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 3 JPA repository interfaces.
+2024-08-20T23:20:00.770+07:00  WARN 19920 --- [test_intern] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-20T23:20:00.775+07:00  INFO 19920 --- [test_intern] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-08-20T23:20:00.867+07:00  INFO 19920 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-20T23:20:00.871+07:00  INFO 19920 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-20T23:20:00.872+07:00  INFO 19920 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-20T23:20:00.909+07:00  INFO 19920 --- [test_intern] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-20T23:20:00.909+07:00  INFO 19920 --- [test_intern] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 546 ms
+2024-08-20T23:20:00.978+07:00  INFO 19920 --- [test_intern] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-20T23:20:00.982+07:00  INFO 19920 --- [test_intern] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-20T23:20:00.998+07:00  INFO 19920 --- [test_intern] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-20T23:20:01.001+07:00  INFO 19920 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-08-20T23:20:01.036+07:00  INFO 19920 --- [test_intern] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection ConnectionID:11 ClientConnectionId: a9ef3cb6-eb56-4286-be4e-00a1371d47cf
+2024-08-20T23:20:01.037+07:00  INFO 19920 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-08-20T23:20:01.037+07:00  WARN 19920 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: SQLServer2012Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-20T23:20:01.038+07:00  WARN 19920 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: SQLServer2012Dialect has been deprecated; use org.hibernate.dialect.SQLServerDialect instead
+2024-08-20T23:20:01.118+07:00  INFO 19920 --- [test_intern] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-20T23:20:01.740+07:00  INFO 19920 --- [test_intern] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T23:20:01.821+07:00  INFO 19920 --- [test_intern] [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static final long org.project4.test_intern.securityConfig.JwtAuthenticationEntryPoint.serialVersionUID
+2024-08-20T23:20:01.843+07:00  WARN 19920 --- [test_intern] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-20T23:20:01.848+07:00  WARN 19920 --- [test_intern] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-08-20T23:20:02.018+07:00  INFO 19920 --- [test_intern] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-20T23:20:02.036+07:00  INFO 19920 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-20T23:20:02.040+07:00  INFO 19920 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Started TestInternApplication in 1.718 seconds (process running for 114.352)
+2024-08-20T23:20:02.042+07:00  INFO 19920 --- [test_intern] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-20T23:20:03.452+07:00  INFO 19920 --- [test_intern] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-08-20T23:20:03.480+07:00  INFO 19920 --- [test_intern] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T23:20:03.481+07:00  INFO 19920 --- [test_intern] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-08-20T23:20:03.484+07:00  INFO 19920 --- [test_intern] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-08-20T23:20:03.576+07:00  INFO 19920 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Starting TestInternApplication using Java 21.0.2 with PID 19920 (D:\test\test_intern\target\classes started by ninhn in D:\test\test_intern)
+2024-08-20T23:20:03.577+07:00  INFO 19920 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-08-20T23:20:03.772+07:00  INFO 19920 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-20T23:20:03.788+07:00  INFO 19920 --- [test_intern] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 3 JPA repository interfaces.
+2024-08-20T23:20:03.847+07:00  WARN 19920 --- [test_intern] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-20T23:20:03.849+07:00  INFO 19920 --- [test_intern] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-08-20T23:20:03.887+07:00  INFO 19920 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-20T23:20:03.887+07:00  INFO 19920 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-20T23:20:03.887+07:00  INFO 19920 --- [test_intern] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-20T23:20:03.909+07:00  INFO 19920 --- [test_intern] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-20T23:20:03.910+07:00  INFO 19920 --- [test_intern] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 332 ms
+2024-08-20T23:20:03.952+07:00  INFO 19920 --- [test_intern] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-20T23:20:03.956+07:00  INFO 19920 --- [test_intern] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-20T23:20:03.963+07:00  INFO 19920 --- [test_intern] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-20T23:20:03.964+07:00  INFO 19920 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-08-20T23:20:03.978+07:00  INFO 19920 --- [test_intern] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection ConnectionID:21 ClientConnectionId: ff9c4411-ad2d-46d6-b3bc-8e5ab79b5554
+2024-08-20T23:20:03.978+07:00  INFO 19920 --- [test_intern] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-08-20T23:20:03.978+07:00  WARN 19920 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: SQLServer2012Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-20T23:20:03.978+07:00  WARN 19920 --- [test_intern] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: SQLServer2012Dialect has been deprecated; use org.hibernate.dialect.SQLServerDialect instead
+2024-08-20T23:20:04.031+07:00  INFO 19920 --- [test_intern] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-20T23:20:04.087+07:00  INFO 19920 --- [test_intern] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T23:20:04.164+07:00  INFO 19920 --- [test_intern] [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static final long org.project4.test_intern.securityConfig.JwtAuthenticationEntryPoint.serialVersionUID
+2024-08-20T23:20:04.181+07:00  WARN 19920 --- [test_intern] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-20T23:20:04.187+07:00  WARN 19920 --- [test_intern] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-08-20T23:20:04.307+07:00  INFO 19920 --- [test_intern] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-20T23:20:04.319+07:00  INFO 19920 --- [test_intern] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-20T23:20:04.323+07:00  INFO 19920 --- [test_intern] [restartedMain] o.p.test_intern.TestInternApplication    : Started TestInternApplication in 0.774 seconds (process running for 116.635)
+2024-08-20T23:20:04.324+07:00  INFO 19920 --- [test_intern] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-20T23:20:10.143+07:00  INFO 19920 --- [test_intern] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-20T23:20:10.143+07:00  INFO 19920 --- [test_intern] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-20T23:20:10.144+07:00  INFO 19920 --- [test_intern] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-20T23:23:53.967+07:00  INFO 19920 --- [test_intern] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-20T23:23:53.968+07:00  INFO 19920 --- [test_intern] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-08-20T23:23:53.969+07:00  INFO 19920 --- [test_intern] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.

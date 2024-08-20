@@ -1,10 +1,11 @@
 package org.project4.test_intern.api;
 
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import org.project4.test_intern.context.RequestContext;
 import org.project4.test_intern.dto.RoleDTO;
 import org.project4.test_intern.dto.UserDTO;
-import org.project4.test_intern.entity.RoleEntity;
-import org.project4.test_intern.entity.UserEntity;
-import org.project4.test_intern.repository.UserRepository;
 import org.project4.test_intern.securityConfig.CustomUserDetailsService;
 import org.project4.test_intern.securityConfig.JwtTokenUtil;
 import org.project4.test_intern.service.UserService;
@@ -12,12 +13,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.crypto.bcrypt.BCrypt;
-import org.springframework.web.bind.annotation.*;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.bcrypt.BCrypt;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.*;
+
+import java.time.Instant;
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/auth")
@@ -28,31 +33,70 @@ public class AuthController {
 
     @Autowired
     private JwtTokenUtil jwtUtil;
+
     @Autowired
     @Lazy
     private CustomUserDetailsService customUserDetailsService;
 
     @PostMapping("/register")
     public ResponseEntity<String> register(@RequestBody UserDTO user) {
-        RoleDTO roleDTO = new RoleDTO();
-        roleDTO.setId(2L);
-        user.setRoleId(roleDTO);
-        userService.register(user);
-        return ResponseEntity.ok("User registered successfully");
+        try {
+            // Gán vai trò mặc định cho người dùng
+            RoleDTO roleDTO = new RoleDTO();
+            roleDTO.setId(2L); // Giả sử 2L là ID của vai trò mặc định
+            user.setRoleId(roleDTO);
+
+            // Đăng ký người dùng
+            userService.register(user);
+            return ResponseEntity.ok("User registered successfully");
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("User registration failed: " + e.getMessage());
+        }
     }
 
     @PostMapping("/login")
-    public ResponseEntity<String> login( String username,
-                                        String password) {
+    public ResponseEntity<Map<String, Object>>  login(@RequestParam String username,
+                                                      @RequestParam String password) {
         try {
+            // Load thông tin người dùng từ database
             UserDetails userDetails = customUserDetailsService.loadUserByUsername(username);
-            Boolean isMatch = BCrypt.checkpw(password, userDetails.getPassword());
-            if (!isMatch)
-                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Login failed: Mật khẩu không chính xác");
+
+            // Kiểm tra mật khẩu
+            boolean isMatch = BCrypt.checkpw(password, userDetails.getPassword());
+            if (!isMatch) {
+                return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+                        .body(Map.of("error", "Mật khẩu không chính xác " ));
+            }
+            // Cập nhật RequestContext với thông tin
+            RequestContext context = RequestContext.get();
+            // Sinh token JWT
             String token = jwtUtil.generateToken(userDetails);
-            return ResponseEntity.ok(token);
+            Map<String, Object> response = new HashMap<>();
+            response.put("token", token);
+            if (context != null) {
+                response.put("requestId", context.getRequestId());
+                response.put("userId", context.getUserId());
+                response.put("timestamp", context.getTimestamp());
+            }
+            return ResponseEntity.ok(response);
         } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Login failed: " + e.getMessage());
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(Map.of("error", "Có lỗi không mong muốn: " + e.getMessage()));
+        }
+    }
+    @PostMapping("/logout")
+    public ResponseEntity<String> logout() {
+        try {
+            // Xóa thông tin người dùng khỏi SecurityContext
+            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+            if (authentication != null) {
+                SecurityContextHolder.getContext().setAuthentication(null);
+            }
+            return ResponseEntity.ok("Logout successful");
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Logout failed: " + e.getMessage());
         }
     }
 }
