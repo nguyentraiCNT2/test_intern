@@ -59,7 +59,7 @@ public class ProfileController {
             response.put("requestId", context.getRequestId());
             response.put("userId", context.getUserId());
             response.put("timestamp", context.getTimestamp());
-    
+
             return ResponseEntity.ok(response);
 
         } catch (Exception e) {
