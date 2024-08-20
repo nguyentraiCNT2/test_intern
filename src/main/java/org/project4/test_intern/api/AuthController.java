@@ -37,6 +37,8 @@ public class AuthController {
     @Autowired
     @Lazy
     private CustomUserDetailsService customUserDetailsService;
+    @Autowired
+    private JwtTokenUtil jwtTokenUtil;
 
     @PostMapping("/register")
     public ResponseEntity<String> register(@RequestBody UserDTO user) {
@@ -86,17 +88,38 @@ public class AuthController {
         }
     }
     @PostMapping("/logout")
-    public ResponseEntity<String> logout() {
+    public ResponseEntity<String> logout(HttpServletRequest request, HttpServletResponse response) {
         try {
             // Xóa thông tin người dùng khỏi SecurityContext
             Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
             if (authentication != null) {
+                // Vô hiệu hóa JWT Token bằng cách thêm vào blacklist
+                String token = request.getHeader("Authorization");
+                if (token != null && token.startsWith("Bearer ")) {
+                    token = token.substring(7);
+                    jwtTokenUtil.invalidateToken(token);  // Hàm này bạn sẽ phải tự triển khai để thêm token vào blacklist
+                }
+
+                // Xóa dữ liệu người dùng khỏi SecurityContext
                 SecurityContextHolder.getContext().setAuthentication(null);
+            } else {
+                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                        .body("Logout failed: bạn chưa đăng nhập!");
             }
+
+            // Xóa cookie liên quan đến JWT (nếu có)
+            Cookie cookie = new Cookie("token", null);
+            cookie.setHttpOnly(true);
+            cookie.setMaxAge(0);  // Làm cho cookie hết hạn ngay lập tức
+            cookie.setPath("/");
+            response.addCookie(cookie);
+
             return ResponseEntity.ok("Logout successful");
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body("Logout failed: " + e.getMessage());
         }
     }
+
+
 }

@@ -9,11 +9,9 @@ import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
 import java.security.Key;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Function;
-import java.util.Base64;
 
 @Component
 public class JwtTokenUtil implements Serializable {
@@ -21,7 +19,7 @@ public class JwtTokenUtil implements Serializable {
     private static final long serialVersionUID = -2550185165626007488L;
     private static final long JWT_TOKEN_VALIDITY = 5 * 60 * 60;
     private static final Key SECRET_KEY = Keys.secretKeyFor(SignatureAlgorithm.HS512);
-
+    private static final Set<String> blacklistedTokens = ConcurrentHashMap.newKeySet();
     public String getUsernameFromToken(String token) {
         return getClaimFromToken(token, Claims::getSubject);
     }
@@ -62,7 +60,13 @@ public class JwtTokenUtil implements Serializable {
                 .signWith(SignatureAlgorithm.HS512, SECRET_KEY)
                 .compact();
     }
+    public void invalidateToken(String token) {
+        blacklistedTokens.add(token);
+    }
 
+    public Boolean isTokenInvalidated(String token) {
+        return blacklistedTokens.contains(token);
+    }
     public Boolean validateToken(String token, UserDetails userDetails) {
         final String username = getUsernameFromToken(token);
         return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
