@@ -13,11 +13,6 @@ public class TokenEntity {
     private String token;
     private Timestamp created_at;
     private Timestamp expires_at;
-    @ManyToOne
-    @JoinColumn(name = "userid")
-    private UserEntity userid;
-
-
     public Long getId() {
         return id;
     }
@@ -48,13 +43,5 @@ public class TokenEntity {
 
     public void setExpires_at(Timestamp expires_at) {
         this.expires_at = expires_at;
-    }
-
-    public UserEntity getUserid() {
-        return userid;
-    }
-
-    public void setUserid(UserEntity user) {
-        this.userid = user;
     }
 }

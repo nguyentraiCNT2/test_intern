@@ -95,7 +95,7 @@ public class AuthController {
                 return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Logout failed: bạn chưa đăng nhập!");
             if (requestTokenHeader != null && requestTokenHeader.startsWith("Bearer ")) {
                 String  jwtToken = requestTokenHeader.substring(7);
-                tokenService.saveToken(jwtToken, authentication.getName());
+                tokenService.saveToken(jwtToken);
             }
             return ResponseEntity.ok("Logout successful");
         } catch (Exception e) {

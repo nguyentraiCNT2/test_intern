@@ -51,16 +51,19 @@ public class JwtRequestFilter extends OncePerRequestFilter {
             try {
                 username = jwtTokenUtil.getUsernameFromToken(jwtToken);
             } catch (IllegalArgumentException e) {
-                System.out.println("Unable to get JWT Token");
+                throw new RuntimeException("Unable to get JWT Token");
             } catch (ExpiredJwtException e) {
-                System.out.println("JWT Token has expired");
+                throw new RuntimeException("JWT Token has expired");
             }
         }
+        Boolean tokenEntities = tokenService.getByToken(jwtToken);
+        if (tokenEntities)
+            throw new RuntimeException("Bạn đã đăng xuất!");
 
         if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
             UserDetails userDetails = this.jwtUserDetailsService.loadUserByUsername(username);
-          Boolean tokenEntities = tokenService.getByToken(jwtToken);
-                if (jwtTokenUtil.validateToken(jwtToken, userDetails) && tokenEntities ) {
+
+                if (jwtTokenUtil.validateToken(jwtToken, userDetails)  ) {
                 UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(
                         userDetails, null, userDetails.getAuthorities());
                 usernamePasswordAuthenticationToken
@@ -69,12 +72,6 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 
                 RequestContext context = RequestContext.get();
                 if (context != null) {
-                    try {
-                        Long userId = Long.parseLong(userDetails.getUsername());
-                        context.setUserId(userId);
-                    } catch (NumberFormatException e) {
-                        System.err.println("Failed to parse user ID: " + userDetails.getUsername());
-                    }
                     context.setTimestamp(Instant.now());
                 }
             }

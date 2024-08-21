@@ -21,14 +21,12 @@ public class TokenServiceIMPL implements TokenService {
     @Autowired
     private ModelMapper modelMapper;
     @Override
-    public void saveToken(String token, String username) {
+    public void saveToken(String token) {
         TokenEntity tokenEntity = new TokenEntity();
-        List<UserEntity> user = userRepository.findByUserName(username);
         tokenEntity.setCreated_at(new Timestamp(System.currentTimeMillis()));
         long oneHourInMillis = 1000 * 60 * 60; // 1 giờ = 60 phút = 3600 giây = 3600000 mili giây
         Timestamp expiresAt = new Timestamp(System.currentTimeMillis() + oneHourInMillis);
         tokenEntity.setExpires_at(expiresAt);
-        tokenEntity.setUserid(user.get(0));
         tokenEntity.setToken(token);
         tokenRepository.save(tokenEntity);
     }
@@ -40,12 +38,6 @@ public class TokenServiceIMPL implements TokenService {
             tokenRepository.save(tokenEntity);
     }
 
-    @Override
-    public  void getByUserid(String Username) {
-        List<UserEntity> user = userRepository.findByUserName(Username);
-            List<TokenEntity> tokenEntities = tokenRepository.findByUserid(user.get(0));
-            logoutToken(tokenEntities.get(0).getId());
-    }
 
     @Override
     public TokenDTO getByid(Long id) {
@@ -53,10 +45,10 @@ public class TokenServiceIMPL implements TokenService {
     }
 
     @Override
-    public Boolean validateToken(String token, String username) {
+    public Boolean validateToken(String token) {
         List<TokenEntity> checktoken = tokenRepository.findByToken(token);
         for (TokenEntity item : checktoken) {
-            if (item.getUserid().getUserName().equals(username) && item.getExpires_at().after(new Timestamp(System.currentTimeMillis()))) {
+            if (item.getExpires_at().after(new Timestamp(System.currentTimeMillis()))) {
                 return true;
             }
         }
@@ -65,9 +57,8 @@ public class TokenServiceIMPL implements TokenService {
 
     @Override
     public Boolean getByToken(String token) {
-            List<TokenEntity> tokenEntities = tokenRepository.findByToken(token);
-            if (tokenEntities.size() > 0)
-                return false;
-        return true;
+         Boolean tokenEntities = tokenRepository.existsByToken(token);
+
+        return tokenEntities;
     }
 }
