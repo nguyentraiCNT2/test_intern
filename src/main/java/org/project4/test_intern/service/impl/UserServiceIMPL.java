@@ -3,7 +3,6 @@ package org.project4.test_intern.service.impl;
 import org.modelmapper.ModelMapper;
 import org.project4.test_intern.dto.UserDTO;
 import org.project4.test_intern.entity.ProfileEntity;
-import org.project4.test_intern.entity.RoleEntity;
 import org.project4.test_intern.entity.UserEntity;
 import org.project4.test_intern.repository.ProfileRepository;
 import org.project4.test_intern.repository.RoleRepository;
@@ -30,6 +29,13 @@ private ModelMapper modelMapper;
 
     public void register(UserDTO userDTO) {
         UserEntity userEntity = modelMapper.map(userDTO,UserEntity.class);
+      Boolean checkemail = userRepository.existsByEmail(userDTO.getEmail());
+        if (checkemail)
+            throw new RuntimeException("Email này đã tồn tại.");
+        if (userEntity.getPassWord().length() < 6)
+            throw new RuntimeException("mật khẩu tối thiểu 6 ký tự");
+        if (userEntity.getPassWord().length() > 25)
+            throw new RuntimeException("mật khẩu tối đa 25 ký tự");
         ProfileEntity profile = new ProfileEntity();
         profile.setEmail(userEntity.getEmail());
         profile.setUserName(userEntity.getEmail());
@@ -38,8 +44,6 @@ private ModelMapper modelMapper;
         String hashPassword =  BCrypt.hashpw(userEntity.getPassWord(), BCrypt.gensalt());
         userEntity.setPassWord(hashPassword);
         UserEntity user_save= userRepository.save(userEntity);
-
-
     }
 
     @Override

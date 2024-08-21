@@ -60,6 +60,7 @@ public class JwtTokenUtil implements Serializable {
                 .signWith(SignatureAlgorithm.HS512, SECRET_KEY)
                 .compact();
     }
+
     public void invalidateToken(String token) {
         blacklistedTokens.add(token);
     }

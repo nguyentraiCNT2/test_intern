@@ -6,6 +6,7 @@ public class ProfileDTO {
     private Long id;
     private String userName;
     private String email;
+
     public Long getId() {
         return id;
     }

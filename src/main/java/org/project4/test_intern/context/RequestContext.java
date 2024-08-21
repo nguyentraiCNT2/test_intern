@@ -3,16 +3,12 @@ package org.project4.test_intern.context;
 import java.time.Instant;
 
 public class RequestContext {
-
     private static final ThreadLocal<RequestContext> context = new ThreadLocal<>();
-
     private String requestId;
     private Long userId;
     private Instant timestamp;
-
     public RequestContext() {
     }
-
     public static RequestContext get() {
         return context.get();
     }
@@ -40,7 +36,6 @@ public class RequestContext {
     public void setUserId(Long userId) {
         this.userId = userId;
     }
-
     public Instant getTimestamp() {
         return timestamp;
     }

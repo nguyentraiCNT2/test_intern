@@ -38,7 +38,6 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(auth -> auth
-                        // Secured endpoints
                         .requestMatchers( "/api/v1/me").hasRole("USER")
                         .requestMatchers( "/api/v1/admin/**").hasRole("ADMIN")
                         .requestMatchers("/api/auth/register", "/api/auth/login","/**").permitAll()
@@ -51,6 +50,7 @@ public class SecurityConfig {
                 .sessionManagement(session -> session
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 )
+
                 .csrf(csrf -> csrf.disable());
 
         http.addFilterBefore(requestContextFilter, UsernamePasswordAuthenticationFilter.class);

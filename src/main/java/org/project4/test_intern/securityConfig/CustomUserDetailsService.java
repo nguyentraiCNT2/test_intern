@@ -30,10 +30,6 @@ public class CustomUserDetailsService implements UserDetailsService {
     @Lazy
     private RoleRepository roleRepository;
 
-    @Autowired
-    @Lazy
-    private PasswordEncoder passwordEncoder;
-
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         List<UserDetails> users = new ArrayList<>();

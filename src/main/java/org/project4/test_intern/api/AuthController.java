@@ -8,10 +8,16 @@ import org.project4.test_intern.dto.RoleDTO;
 import org.project4.test_intern.dto.UserDTO;
 import org.project4.test_intern.securityConfig.CustomUserDetailsService;
 import org.project4.test_intern.securityConfig.JwtTokenUtil;
+import org.project4.test_intern.service.TokenService;
 import org.project4.test_intern.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Lazy;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.ValueOperations;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseCookie;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -19,10 +25,14 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.util.WebUtils;
 
+import java.time.Duration;
 import java.time.Instant;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
+import java.util.concurrent.TimeUnit;
 
 @RestController
 @RequestMapping("/api/auth")
@@ -30,25 +40,19 @@ public class AuthController {
 
     @Autowired
     private UserService userService;
-
     @Autowired
     private JwtTokenUtil jwtUtil;
-
     @Autowired
     @Lazy
     private CustomUserDetailsService customUserDetailsService;
     @Autowired
-    private JwtTokenUtil jwtTokenUtil;
-
+    private TokenService tokenService;
     @PostMapping("/register")
     public ResponseEntity<String> register(@RequestBody UserDTO user) {
         try {
-            // Gán vai trò mặc định cho người dùng
             RoleDTO roleDTO = new RoleDTO();
-            roleDTO.setId(2L); // Giả sử 2L là ID của vai trò mặc định
+            roleDTO.setId(2L);
             user.setRoleId(roleDTO);
-
-            // Đăng ký người dùng
             userService.register(user);
             return ResponseEntity.ok("User registered successfully");
         } catch (Exception e) {
@@ -58,21 +62,15 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<Map<String, Object>>  login(@RequestParam String username,
-                                                      @RequestParam String password) {
+    public ResponseEntity<Map<String, Object>>  login(@RequestParam String username, @RequestParam String password) {
         try {
-            // Load thông tin người dùng từ database
             UserDetails userDetails = customUserDetailsService.loadUserByUsername(username);
-
-            // Kiểm tra mật khẩu
             boolean isMatch = BCrypt.checkpw(password, userDetails.getPassword());
             if (!isMatch) {
                 return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
                         .body(Map.of("error", "Mật khẩu không chính xác " ));
             }
-            // Cập nhật RequestContext với thông tin
             RequestContext context = RequestContext.get();
-            // Sinh token JWT
             String token = jwtUtil.generateToken(userDetails);
             Map<String, Object> response = new HashMap<>();
             response.put("token", token);
@@ -87,39 +85,22 @@ public class AuthController {
                     .body(Map.of("error", "Có lỗi không mong muốn: " + e.getMessage()));
         }
     }
+
     @PostMapping("/logout")
     public ResponseEntity<String> logout(HttpServletRequest request, HttpServletResponse response) {
         try {
-            // Xóa thông tin người dùng khỏi SecurityContext
+            final String requestTokenHeader = request.getHeader("Authorization");
             Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-            if (authentication != null) {
-                // Vô hiệu hóa JWT Token bằng cách thêm vào blacklist
-                String token = request.getHeader("Authorization");
-                if (token != null && token.startsWith("Bearer ")) {
-                    token = token.substring(7);
-                    jwtTokenUtil.invalidateToken(token);  // Hàm này bạn sẽ phải tự triển khai để thêm token vào blacklist
-                }
-
-                // Xóa dữ liệu người dùng khỏi SecurityContext
-                SecurityContextHolder.getContext().setAuthentication(null);
-            } else {
-                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                        .body("Logout failed: bạn chưa đăng nhập!");
+            if (authentication == null)
+                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Logout failed: bạn chưa đăng nhập!");
+            if (requestTokenHeader != null && requestTokenHeader.startsWith("Bearer ")) {
+                String  jwtToken = requestTokenHeader.substring(7);
+                tokenService.saveToken(jwtToken, authentication.getName());
             }
-
-            // Xóa cookie liên quan đến JWT (nếu có)
-            Cookie cookie = new Cookie("token", null);
-            cookie.setHttpOnly(true);
-            cookie.setMaxAge(0);  // Làm cho cookie hết hạn ngay lập tức
-            cookie.setPath("/");
-            response.addCookie(cookie);
-
             return ResponseEntity.ok("Logout successful");
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body("Logout failed: " + e.getMessage());
         }
     }
-
-
 }
